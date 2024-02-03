@@ -1,0 +1,23 @@
+{
+  "name": "github_api",
+  "version": "1.0.0",
+  "description": "JavaScript GitHub api",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eugenesang/github_api.git"
+  },
+  "keywords": [
+    "app"
+  ],
+  "author": "Eugene Sang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eugenesang/github_api/issues"
+  },
+  "homepage": "https://github.com/eugenesang/github_api#readme"
+}
