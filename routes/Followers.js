@@ -17,13 +17,14 @@ class GithubFollowers extends GithubAccount{
         const response = await fetch(this.followers_url);
         const followers = await response.json();
         if(response.ok){
-            this.followerList = followers;
-        }
+            this.followerList = followers.map(({login})=>{
+                const follower = new GithubAccount(login);
+                return follower;
+            });
+
+            await Promise.all(this.followerList.map(d=>d.load()))
+        }        
     }
 }
 
-const user = new GithubFollowers('eugenesang');
-(async ()=>{
-    await user.loadFollowers();
-    console.log(user)
-})()
+export default GithubFollowers;
